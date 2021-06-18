@@ -1,6 +1,6 @@
-const SacAtendimentoModels = require("../models/sac_atendimento.models");
+const InsertModel = require("../models/insert.model");
 
-class SacAtendimentoServices {
+class InsertService {
     constructor({ database = '', hostname = '', username = '', password = '', dialect = '' }) {
         this.options = {
             database,
@@ -9,7 +9,7 @@ class SacAtendimentoServices {
             password,
             dialect,
         };
-        this.models = new SacAtendimentoModels(this.options);
+        this.models = new InsertModel(this.options);
     }
 
     async insertValues(table, values = {}) {
@@ -25,4 +25,4 @@ class SacAtendimentoServices {
     }
 }
 
-module.exports = SacAtendimentoServices;
+module.exports = InsertService;

@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 
-class SacAtendimentoModels {
+class InsertModel {
 
     constructor({ database = '', hostname = '', username = '', password = '', dialect = '', port = 1433 }) {
         this.options = {
@@ -30,4 +30,4 @@ class SacAtendimentoModels {
 
 }
 
-module.exports = SacAtendimentoModels;
+module.exports = InsertModel;

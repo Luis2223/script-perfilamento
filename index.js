@@ -1,5 +1,5 @@
 const yargs = require('yargs');
-const SacAtendimentoServices = require('./src/services/sac_atendimento.services');
+const InsertService = require('./src/services/insert.service');
 
 const argv = yargs.options({
     u: { type: "string", alias: "username", demandOption: true },
@@ -13,7 +13,7 @@ const argv = yargs.options({
 
 console.log(`is running...`);
 
-const atendimento = new SacAtendimentoServices(argv);
+const atendimento = new InsertService(argv);
 atendimento.insertValues(argv.table, argv.values)
 .then(res => console.log('success'))
 .catch(err => console.error(err))
