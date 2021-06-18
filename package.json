@@ -1,0 +1,16 @@
+{
+  "name": "script-perfilamento",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Luis Felipe",
+  "license": "ISC",
+  "dependencies": {
+    "mssql": "^7.1.3",
+    "sequelize": "^6.6.2",
+    "yargs": "^17.0.1"
+  }
+}
